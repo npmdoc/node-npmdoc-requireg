@@ -1,0 +1,428 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/h2non/requireg"
+
+    >requireg (v0.1.6)</a>
+</h1>
+<h4>Require and resolve global modules like a boss</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.requireg">module requireg</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.requireg">
+            function <span class="apidocSignatureSpan"></span>requireg
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.globalize">
+            function <span class="apidocSignatureSpan">requireg.</span>globalize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.resolve">
+            function <span class="apidocSignatureSpan">requireg.</span>resolve
+            <span class="apidocSignatureSpan">(module, dirname)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">requireg.</span>resolvers</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.requireg.resolvers">module requireg.resolvers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.resolvers.0">
+            function <span class="apidocSignatureSpan">requireg.resolvers.</span>0
+            <span class="apidocSignatureSpan">(module, dirname)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.resolvers.1">
+            function <span class="apidocSignatureSpan">requireg.resolvers.</span>1
+            <span class="apidocSignatureSpan">(module, dirname)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.resolvers.2">
+            function <span class="apidocSignatureSpan">requireg.resolvers.</span>2
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.resolvers.3">
+            function <span class="apidocSignatureSpan">requireg.resolvers.</span>3
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.resolvers.4">
+            function <span class="apidocSignatureSpan">requireg.resolvers.</span>4
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requireg.resolvers.5">
+            function <span class="apidocSignatureSpan">requireg.resolvers.</span>5
+            <span class="apidocSignatureSpan">(module)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.requireg" id="apidoc.module.requireg">module requireg</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.requireg" id="apidoc.element.requireg.requireg">
+        function <span class="apidocSignatureSpan"></span>requireg
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function requireg(module) {
+  try {
+    return require(resolve(module))
+  } catch (e) {
+    throw new Error(&#x22;Cannot find global module &#x27;&#x22;+ module +&#x22;&#x27;&#x22;)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.globalize" id="apidoc.element.requireg.globalize">
+        function <span class="apidocSignatureSpan">requireg.</span>globalize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">globalize = function () {
+  global.requireg = requireg
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var modulePath = requireg.resolve(&#x27;npm&#x27;)
+// returns &#x27;/usr/local/lib/node_modules/npm/lib/npm.js&#x27;
+```
+
+### Globalize it
+
+```js
+require(&#x27;requireg&#x27;).<span class="apidocCodeKeywordSpan">globalize</span>()
+```
+
+Now it is globally available from any source file
+
+```js
+var globalModule = requireg(&#x27;npm&#x27;)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.resolve" id="apidoc.element.requireg.resolve">
+        function <span class="apidocSignatureSpan">requireg.</span>resolve
+        <span class="apidocSignatureSpan">(module, dirname)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolve(module, dirname) {
+  var i, resolver, modulePath
+
+  for (i = 0, l = resolvers.length; i &#x3c; l; i += 1) {
+    resolver = resolvers[i]
+    if (modulePath = resolver(module, dirname)) {
+      break
+    }
+  }
+
+  return modulePath
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// require a globally installed package
+var npm = requireg(&#x27;npm&#x27;)
+```
+
+### Resolve module path
+
+```js
+var modulePath = requireg.<span class="apidocCodeKeywordSpan">resolve</span>(&#x27;npm&#x27;)
+// returns &#x27;/usr/local/lib/node_modules/npm/lib/npm.js&#x27;
+```
+
+### Globalize it
+
+```js
+require(&#x27;requireg&#x27;).globalize()
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.requireg.resolvers" id="apidoc.module.requireg.resolvers">module requireg.resolvers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.resolvers.0" id="apidoc.element.requireg.resolvers.0">
+        function <span class="apidocSignatureSpan">requireg.resolvers.</span>0
+        <span class="apidocSignatureSpan">(module, dirname)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nativeResolve(module, dirname) {
+  try {
+    return require.resolve(module, dirname)
+  } catch (e) {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.resolvers.1" id="apidoc.element.requireg.resolvers.1">
+        function <span class="apidocSignatureSpan">requireg.resolvers.</span>1
+        <span class="apidocSignatureSpan">(module, dirname)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nodePathResolve(module, dirname) {
+  var i, l, modulePath
+  var nodePath = process.env.NODE_PATH
+
+  if (!nodePath) { return }
+
+  nodePath = nodePath.split(path.delimiter).map(function (nodepath) {
+    return path.normalize(nodepath)
+  })
+
+  for (i = 0, l = nodePath.length; i &#x3c; l; i += 1) {
+    if (modulePath = resolveFn(module, dirname || nodePath[i])) {
+      break
+    }
+  }
+
+  return modulePath
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.resolvers.2" id="apidoc.element.requireg.resolvers.2">
+        function <span class="apidocSignatureSpan">requireg.resolvers.</span>2
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function userHomeResolve(module) {
+  var i, l, modulePath
+  var homePath = isWin32 ? process.env[&#x27;USERPROFILE&#x27;] : process.env[&#x27;HOME&#x27;]
+
+  var paths = [
+    &#x27;node_modules&#x27;,
+    &#x27;node_libraries&#x27;,
+    &#x27;node_packages&#x27;
+  ]
+
+  for (i = 0, l = paths.length; i &#x3c; l; i += 1) {
+    if (modulePath = resolveFn(module, homePath, paths[i])) {
+      break;
+    }
+  }
+
+  return modulePath
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.resolvers.3" id="apidoc.element.requireg.resolvers.3">
+        function <span class="apidocSignatureSpan">requireg.resolvers.</span>3
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nodeModulesResolve(module) {
+  var i, l, modulePath
+  var nodeModules = process.env[&#x27;NODE_MODULES&#x27;]
+
+  if (typeof nodeModules === &#x27;string&#x27;) {
+    nodeModules = nodeModules.split(path.delimiter)
+    for (i = 0, l = nodeModules.length; i &#x3c; l; i += 1) {
+      if (modulePath = resolveFn(module, nodeModules[i])) {
+        break;
+      }
+    }
+  }
+
+  return modulePath
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.resolvers.4" id="apidoc.element.requireg.resolvers.4">
+        function <span class="apidocSignatureSpan">requireg.resolvers.</span>4
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prefixResolve(module) {
+  var modulePath, dirname
+  var prefix = rc(&#x27;npm&#x27;).prefix
+
+  if (isWin32) {
+    prefix = prefix || path.join(process.env.APPDATA, &#x27;npm&#x27;)
+    dirname = prefix
+  }
+  else {
+    prefix = prefix || path.join(path.dirname(process.execPath), &#x27;..&#x27;)
+    dirname = path.join(prefix, &#x27;lib&#x27;)
+  }
+
+  dirname = path.join(dirname, &#x27;node_modules&#x27;)
+  modulePath = resolveFn(module, dirname)
+
+  return modulePath
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requireg.resolvers.5" id="apidoc.element.requireg.resolvers.5">
+        function <span class="apidocSignatureSpan">requireg.resolvers.</span>5
+        <span class="apidocSignatureSpan">(module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function execPathResolve(module) {
+  var modulePath, dirname
+  var execPath = path.dirname(process.execPath)
+
+  if (isWin32) {
+    dirname = execPath
+  }
+  else {
+    dirname = path.join(execPath, &#x27;..&#x27;, &#x27;lib&#x27;)
+  }
+
+  dirname = path.join(dirname, &#x27;node_modules&#x27;)
+  modulePath = resolveFn(module, dirname)
+
+  return modulePath
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
